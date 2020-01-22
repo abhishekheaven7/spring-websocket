@@ -45,7 +45,9 @@ public class WebSocketListenerExtension extends WebSocketListener {
 
     @Override
     public void onMessage(WebSocket webSocket, String text) {
-        if (text.equalsIgnoreCase("\n")) {
+        System.out.println("Text received is : "+text);
+        System.out.println("Text length is: "+text.length());
+        if (text == null || text.trim().length() == 0) {
             System.out.println("Heartbeat from server");
             System.out.println("Current time: " + LocalDateTime.now());
         } else {
