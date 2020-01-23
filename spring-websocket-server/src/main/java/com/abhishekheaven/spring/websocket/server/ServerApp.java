@@ -11,5 +11,6 @@ public class ServerApp {
         System.out.println("Starting Spring Application...");
         System.out.println("Commit1");
         app.run(args);
+        System.out.println("commit 2");
     }
 }
